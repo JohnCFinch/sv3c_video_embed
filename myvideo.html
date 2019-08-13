@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>SV3C PTZ Embedded Video</TITLE>
+</HEAD>
+
+
+<script>
+	
+var ip="<CAMERA_IP>";
+document.write('<script language="JavaScript1.2" type="text/javascript" src="http:\/\/'+ip+'\/js/libde265.js"><\/script>');
+document.write('<script src="http:\/\/'+ip+'\/cgi-bin\/hi3510\/param.cgi?cmd=getlanguage&cmd=getvideoattr&cmd=getvencattr&-chn=11&cmd=getvencattr&-chn=12&cmd=getsetupflag&cmd=getaudioflag&cmd=getrtmpattr&cmd=gethttpport" type="text/javascript"><\/script>');
+
+
+function start()
+{
+	var video_canvas = document.getElementById("video_canvas");	
+	player = new libde265.RawPlayer(video_canvas);
+	player.playvideo(ip,httpport,'12',name0,password0);
+}
+
+</script>
+
+<body bgcolor="000000" onload="start()">
+
+	<div><canvas id="video_canvas" width='640' height='352'></canvas></div>
+
+</body>
+</HTML>
