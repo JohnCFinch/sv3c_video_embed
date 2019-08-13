@@ -8,7 +8,7 @@ Load you new version of myfile.html on your web sever and it should work with mo
 
 I have been successful enbedding video with the Mac versions of Firefox, Safari and Chrome.  Safari on an iPad and iPhone work as well.  I tried on an older version of IE on Win7 and no joy.  The SV3C specific version of libde265.js appears to use a websockets interface which may predate my Win7 IE.  </br></br>
 
-<b>Video Resolution</b></br></br>
+<b>Video Resolution</b></br>
 Edit the third argument in the playvideo call on line 18 to read '11' instead of '12' to get the higher resolution video stream.  My results were a bit choppy at the high resolution either because of network issues or maybe my browsers javascript can't keep up.   
 
 
